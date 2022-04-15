@@ -54,6 +54,10 @@ body{
     /* margin-top: 1.4rem; */
 }
 
+label{
+    word-wrap: break-word;
+}
+
 .score-area{
     margin-top: 2rem;
     background-color: hsla(183, 87%, 91%, 0.716);
