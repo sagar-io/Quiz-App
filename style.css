@@ -4,6 +4,7 @@
 }
 
 body{
+    user-select: none;
     padding: 0;
     margin: 0;
     background-color: hsla(183, 87%, 91%, 0.716);

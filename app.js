@@ -7,46 +7,47 @@ const scoreCount = document.getElementById('scores');
 
 const quizDataBase = [
     {
-        question: "What was the first commerically available computer processor?",
-        0: "Intel 486SX", 
-        1: "Intel 4004", 
-        2: "TMS 1000", 
-        3: "AMD AM386",
+        question: "What does HTML stand for?",
+        0: "Hyperlinks and Text Markup Language", 
+        1: "Hyper Text Markup Language", 
+        2: "Home Tool Markup Language", 
+        3: "Hyper Text Makeup Language",
         ans: "1"
     },
      {
-        question: "In computing, what does MIDI stand for?",
-        0: "Musical Instrument Data Interface", 
-        1: "Modular Interface of Digital Instruments", 
-        2: "Musical Interface of Digital Instruments", 
-        3: "Musical Instrument Digital Interface",
-        ans: "3"
+        question: "Choose the correct HTML tag for the largest heading",
+        0: "&lt;heading&gt;", 
+        1: "&lt;h6&gt;", 
+        2: "&lt;head&gt;", 
+        3: "&lth1&gt;",
+        ans: "1"
     },
      {
-        question: "What was the first company to use the term &quot;Golden Master&quot;?",
-        0: "Apple", 
-        1: "IBM", 
-        2: "Google", 
-        3: "Micorsoft",
+        question: "What is the correct HTML tag for inserting a line break?",
+        0: "&lt;br&gt;", 
+        1: "&lt;lb&gt;", 
+        2: "&lt;break&gt;", 
+        3: "&lt;BR&gt;",
         ans: "0"
-    } 
-    // ,{
-    //     question: "",
-    //     a: "", 
-    //     b: "", 
-    //     c: "", 
-    //     d: "",
-    //     ans: "ans"
-    // },
-    // {
-    //     question: "",
-    //     a: "", 
-    //     b: "", 
-    //     c: "", 
-    //     d: "",
-    //     ans: "ans"
-    // },
+    } ,
+    {
+        question: "What is the correct HTML for creating a hyperlink?",
+        0: "&lt;a url=\"http:www.w3schools.com\">W3Schools.com&lt;/a&gt;", 
+        1: "&lt;a name=\"http://www.w3schools.com\">W3Schools.com&lt;/a&gt;", 
+        2: "&lt;a href=\"http://www.w3schools.com\">W3Schools&lt;/a&gt;", 
+        3: "&lt;a>http://www.w3schools.com&lt;/a&gt;",
+        ans: "2"
+    },
+    {
+        question: "How can you make a numbered list?",
+        0: "&lt;ol&gt;", 
+        1: "&lt;ul&gt;", 
+        2: "&lt;dl&gt;", 
+        3: "&lt;list&gt;",
+        ans: "0"
+    },
 ]
+let numOfQues = 5;
 let i = 0;
 let score = 0;
 quizHandler(quizDataBase);
@@ -62,17 +63,40 @@ function quizHandler(dataBase) {
 
 function updateQuestion() {
     i++;
-    if(i > 2)
+    if(i >= numOfQues)
     {
-        scoreBox.style.display = 'block';
-        quesAns.style.display = 'none';
-        scoreCount.innerHTML = `${score}/${i}`;
+        displayScore();
     }else{
         scoreBox.style.display = 'none';
         quesAns.style.display = 'block';
+         quizHandler(quizDataBase);
     }
-    quizHandler(quizDataBase);
+   
 }
+
+function displayScore() {
+        scoreBox.style.display = 'block';
+        quesAns.style.display = 'none';
+        switch (score) {
+            case 1:
+                 scoreCount.innerHTML = `&#11088;<br> ${score}/${i}`;
+                break;
+            case 2:
+                scoreCount.innerHTML = `&#11088;&#11088;<br> ${score}/${i}`;
+                break;
+            case 3:
+                scoreCount.innerHTML = `&#11088;&#11088;&#11088;<br> ${score}/${i}`;
+                break;
+            case 4:
+                scoreCount.innerHTML = `&#11088;&#11088;&#11088;&#11088;<br> ${score}/${i}`;
+                break;
+            case 5:
+                scoreCount.innerHTML = `&#11088;&#11088;&#11088;&#11088;&#11088;<br> ${score}/${i}`;
+                break;
+            default:
+                scoreCount.innerHTML = `&#128123;<br> ${score}/${i}`;
+        }       
+}       
 
 function evalScore(){
     let flag = false;
