@@ -92,6 +92,7 @@ body{
  #showcase{
     padding: 0.8rem;
     max-width: 80%;
+    min-width: none;
     margin: auto;
     border-radius: 7px;
 }
