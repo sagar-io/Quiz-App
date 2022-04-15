@@ -24,7 +24,6 @@ body{
     border-radius: 10px;
     box-shadow: 0 6px 10px -6px currentColor;
     min-width:  500px;
-    
 }
 #showcase h2{
     margin-bottom: 2rem;
@@ -85,4 +84,12 @@ body{
 
 .ques-ans{
     display: block;
+}
+
+
+
+@media(max-width: 480px){
+    #showcase{
+        min-width: auto;
+    }
 }
