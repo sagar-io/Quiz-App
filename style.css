@@ -94,8 +94,8 @@ label{
 
 @media(max-width: 480px){
  #showcase{
-    padding: 0.8rem;
-    max-width: 80%;
+    padding: 1rem;
+    max-width: 93%;
     min-width: 200px;
     margin: auto;
     border-radius: 7px;
