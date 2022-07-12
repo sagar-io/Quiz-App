@@ -10,4 +10,4 @@ This is a simple and beautiful quiz website. It is written in HTML, CSS and Vani
  
 ### Links
 
-- Live Site URL: [https://quiz-app-io.netlify.app/]
+- [Live Site URL](https://quiz-app-io.netlify.app/)
